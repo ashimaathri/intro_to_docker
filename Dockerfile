@@ -14,9 +14,16 @@ RUN ln -s /usr/games/fortune /usr/bin/fortune
 
 # install yet another software
 RUN apt-get -y install nodejs
+RUN apt-get -y install npm
 
 # package your app into the image 
 COPY ./my-awesome-app /my-awesome-app
+
+# Start at the correct directory
 WORKDIR /my-awesome-app
 
+# Install application dependencies
+RUN npm install
+
+# Run the app
 CMD nodejs index.js
