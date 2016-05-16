@@ -1,0 +1,14 @@
+{
+  "name": "my-awesome-app",
+  "version": "0.0.1",
+  "description": "Much awesome!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashima Athri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
