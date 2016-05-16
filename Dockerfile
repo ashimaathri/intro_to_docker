@@ -1,18 +1,18 @@
-FROM library/ubuntu:16.04 
+FROM library/ubuntu:16.04
 
 # update the existing software 
 RUN apt-get upgrade
 RUN apt-get update
 
-# install a specific software
+# install and configure a specific software
 RUN apt-get -y install cowsay
 RUN ln -s /usr/games/cowsay /usr/bin/cowsay
 
-# install another software
+# install and configure another software
 RUN apt-get -y install fortune-mod
 RUN ln -s /usr/games/fortune /usr/bin/fortune
 
-# install yet another software
+# moar softwares
 RUN apt-get -y install nodejs
 RUN apt-get -y install npm
 

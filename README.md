@@ -2,7 +2,7 @@ Introduction to Docker Tutorial
 -------------------------------
 
 1. Get the docker image from the docker registry.   
-   `docker pull library/ubuntu:16:04`
+   `docker pull library/ubuntu:16.04`
 
 2. Run the docker container and try out some commands inside it.  
    `docker run -it ubuntu:16.04 /bin/bash`   
@@ -17,12 +17,12 @@ Introduction to Docker Tutorial
    RUN apt-get upgrade
    RUN apt-get update
 
-   # install and configure specific software
+   # install and configure a specific software
    RUN apt-get -y install cowsay
    RUN ln -s /usr/games/cowsay /usr/bin/cowsay
    ``` 
    `docker build -t my-awesome-program:0.0.1 .`  
-   `docker images`
+   `docker images`   
    `docker run my-awesome-program:0.0.1 cowsay testing`
 
 4. Make updates and go to the next version
@@ -43,7 +43,7 @@ Introduction to Docker Tutorial
    CMD fortune | cowsay
    ``` 
    `docker build -t my-awesome-program:0.0.2 .`  
-   `docker images`
+   `docker images`   
    `docker run my-awesome-program:0.0.2`
 
 5. Bake your application into the image 
